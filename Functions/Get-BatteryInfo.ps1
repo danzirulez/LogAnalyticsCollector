@@ -20,6 +20,9 @@
 
     .NOTES
     This function uses the `BatteryStaticData` and `BatteryFullChargedCapacity` WMI classes to gather battery data.
+    Author: DanZi
+    Last Updated: 2025-05-05
+
     #>
 
     [CmdletBinding()]

@@ -1,20 +1,21 @@
-﻿<#
-.SYNOPSIS
-    Retrieves the Azure AD Device ID from the local registry and certificate store.
+﻿function Get-AzureADDeviceID {
+    <#
+    .SYNOPSIS
+        Retrieves the Azure AD Device ID from the local registry and certificate store.
 
-.DESCRIPTION
-    This function queries the registry and certificate store for Azure AD device information. 
-    It retrieves the device ID from the machine's certificate subject, based on the thumbprint stored in the registry.
+    .DESCRIPTION
+        This function queries the registry and certificate store for Azure AD device information. 
+        It retrieves the device ID from the machine's certificate subject, based on the thumbprint stored in the registry.
 
-.EXAMPLE
-    $deviceID = Get-AzureADDeviceID
-    Write-Output "Device ID: $deviceID"
+    .EXAMPLE
+        $deviceID = Get-AzureADDeviceID
+        Write-Output "Device ID: $deviceID"
 
-.NOTES
-    Author: DanZi
-    Last Updated: 2025-05-05
-#>
-function Get-AzureADDeviceID {
+    .NOTES
+        Author: DanZi
+        Last Updated: 2025-05-05
+    #>
+
     try {
         # Define Cloud Domain Join information registry path
         $AzureADJoinInfoRegistryKeyPath = "HKLM:\SYSTEM\CurrentControlSet\Control\CloudDomainJoin\JoinInfo"

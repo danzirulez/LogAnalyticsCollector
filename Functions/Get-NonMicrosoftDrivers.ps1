@@ -1,21 +1,23 @@
 ﻿function Get-NonMicrosoftDrivers {
     <#
     .SYNOPSIS
-    Retrieves all non-Microsoft signed drivers installed on the system.
+        Retrieves all non-Microsoft signed drivers installed on the system.
 
     .DESCRIPTION
-    This function queries the `Win32_PnPSignedDriver` class to retrieve details about all non-Microsoft signed drivers on the system.
-    It filters out drivers provided by Microsoft and returns information such as the driver name, version, date, device class, device ID, manufacturer, INF file name, and device location.
+        This function queries the `Win32_PnPSignedDriver` class to retrieve details about all non-Microsoft signed drivers on the system.
+        It filters out drivers provided by Microsoft and returns information such as the driver name, version, date, device class, device ID, manufacturer, INF file name, and device location.
 
     .OUTPUTS
-    Returns an array of custom objects containing the details of each non-Microsoft signed driver.
+        Returns an array of custom objects containing the details of each non-Microsoft signed driver.
 
     .EXAMPLE
-    Get-NonMicrosoftDrivers
-    Retrieves and displays details for all non-Microsoft signed drivers installed on the system.
+        Get-NonMicrosoftDrivers
+        Retrieves and displays details for all non-Microsoft signed drivers installed on the system.
 
     .NOTES
-    The `Win32_PnPSignedDriver` class is used to gather information about drivers installed on the system.
+        The `Win32_PnPSignedDriver` class is used to gather information about drivers installed on the system.
+        Author: DanZi
+        Last Updated: 2025-05-05
     #>
 
     [CmdletBinding()]

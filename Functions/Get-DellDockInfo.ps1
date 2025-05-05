@@ -1,34 +1,36 @@
 ﻿function Get-DellDockInfo {
     <#
     .SYNOPSIS
-    Retrieves information about Dell docking stations installed on the system.
+        Retrieves information about Dell docking stations installed on the system.
 
     .DESCRIPTION
-    This function checks if the Dell OpenManage Inventory Agent is installed on the machine. 
-    If it is, it retrieves the docking station information using the 'Dell_SoftwareIdentity' WMI class 
-    in the 'root\Dell\SysInv' namespace. The function specifically filters out devices whose ElementName starts with "WD",
-    typically representing Dell docking stations.
+        This function checks if the Dell OpenManage Inventory Agent is installed on the machine. 
+        If it is, it retrieves the docking station information using the 'Dell_SoftwareIdentity' WMI class 
+        in the 'root\Dell\SysInv' namespace. The function specifically filters out devices whose ElementName starts with "WD",
+        typically representing Dell docking stations.
 
-    If the Dell OpenManage Inventory Agent is not installed or the necessary WMI class is unavailable, 
-    the function will return appropriate messages to inform the user.
+        If the Dell OpenManage Inventory Agent is not installed or the necessary WMI class is unavailable, 
+        the function will return appropriate messages to inform the user.
 
     .PARAMETER None
-    This function does not require any input parameters.
+        This function does not require any input parameters.
 
     .OUTPUTS
-    Returns a collection of docking station objects, each containing:
-        - ElementName
-        - SerialNumber
-        - VersionString
-    If no docking stations are found, it returns $null.
+        Returns a collection of docking station objects, each containing:
+            - ElementName
+            - SerialNumber
+            - VersionString
+        If no docking stations are found, it returns $null.
 
     .EXAMPLE
-    Get-DellDockInfo
-    Retrieves a list of Dell docking stations (if installed) with their ElementName, SerialNumber, and VersionString.
+        Get-DellDockInfo
+        Retrieves a list of Dell docking stations (if installed) with their ElementName, SerialNumber, and VersionString.
 
     .NOTES
-    Requires the Dell OpenManage Inventory Agent to be installed on the system. 
-    This function is specific to Dell systems using the OpenManage software suite.
+        Requires the Dell OpenManage Inventory Agent to be installed on the system. 
+        This function is specific to Dell systems using the OpenManage software suite.
+        Author: DanZi
+        Last Updated: 2025-05-05
 
     #>
     

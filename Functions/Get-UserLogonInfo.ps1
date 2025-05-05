@@ -1,33 +1,34 @@
 ﻿function Get-UserLogonInfo {
     <#
     .SYNOPSIS
-    Retrieves user logon information, including the count of successful logon events for each user.
+        Retrieves user logon information, including the count of successful logon events for each user.
 
     .DESCRIPTION
-    This function retrieves successful logon events (Event ID 4624) from the Security event log over the past specified number of days (default is 7 days).
-    It processes the events, filtering out system and service accounts, and returns a list of usernames along with the count of logons.
+        This function retrieves successful logon events (Event ID 4624) from the Security event log over the past specified number of days (default is 7 days).
+        It processes the events, filtering out system and service accounts, and returns a list of usernames along with the count of logons.
     
-    If the device is domain-joined, it attempts to resolve the username to its corresponding User Principal Name (UPN) using Active Directory.
-    The function returns a list of unique users, their UPN, and the number of logons.
+        If the device is domain-joined, it attempts to resolve the username to its corresponding User Principal Name (UPN) using Active Directory.
+        The function returns a list of unique users, their UPN, and the number of logons.
 
     .PARAMETER DaysBack
-    The number of days to look back for logon events. The default value is 7 days.
+        The number of days to look back for logon events. The default value is 7 days.
     
     .OUTPUTS
-    Returns a list of custom objects containing the UPN (User Principal Name) and the count of logons (LogonCount) for each user.
+        Returns a list of custom objects containing the UPN (User Principal Name) and the count of logons (LogonCount) for each user.
 
     .EXAMPLE
-    Get-UserLogonInfo
-    Retrieves user logon information from the past 7 days, including the UPN and logon count for each user.
+        Get-UserLogonInfo
+        Retrieves user logon information from the past 7 days, including the UPN and logon count for each user.
 
     .EXAMPLE
-    Get-UserLogonInfo -DaysBack 30
-    Retrieves user logon information from the past 30 days, including the UPN and logon count for each user.
+        Get-UserLogonInfo -DaysBack 30
+        Retrieves user logon information from the past 30 days, including the UPN and logon count for each user.
 
     .NOTES
-    This function relies on Event ID 4624 from the Windows Security log to identify successful logons.
-    If the machine is domain-joined, the function will attempt to resolve the logon username to the UPN using Active Directory.
-
+        This function relies on Event ID 4624 from the Windows Security log to identify successful logons.
+        If the machine is domain-joined, the function will attempt to resolve the logon username to the UPN using Active Directory.
+        Author: DanZi
+        Last Updated: 2025-05-05
     #>
 
     [CmdletBinding()]

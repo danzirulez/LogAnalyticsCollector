@@ -1,23 +1,25 @@
 ﻿function Get-InstalledWindowsFeatures {
     <#
     .SYNOPSIS
-    Retrieves a list of installed Windows features that are currently enabled.
+        Retrieves a list of installed Windows features that are currently enabled.
 
     .DESCRIPTION
-    This function queries the list of optional Windows features using the `Get-WindowsOptionalFeature` cmdlet.
-    It filters and returns the enabled features, sorting them by the feature name. The result includes the feature name and its state.
+        This function queries the list of optional Windows features using the `Get-WindowsOptionalFeature` cmdlet.
+        It filters and returns the enabled features, sorting them by the feature name. The result includes the feature name and its state.
     
-    If an error occurs during retrieval, a warning is issued, and the function returns `$null`.
+        If an error occurs during retrieval, a warning is issued, and the function returns `$null`.
 
     .OUTPUTS
-    Returns a list of custom objects containing the `FeatureName` and `State` of enabled Windows features.
+        Returns a list of custom objects containing the `FeatureName` and `State` of enabled Windows features.
     
     .EXAMPLE
-    Get-InstalledWindowsFeatures
-    Retrieves and displays a sorted list of all enabled Windows features.
+        Get-InstalledWindowsFeatures
+        Retrieves and displays a sorted list of all enabled Windows features.
 
     .NOTES
-    The function utilizes the `Get-WindowsOptionalFeature` cmdlet, which requires Windows to be running in an online state.
+        The function utilizes the `Get-WindowsOptionalFeature` cmdlet, which requires Windows to be running in an online state.
+        Author: DanZi
+        Last Updated: 2025-05-05
     #>
 
     [CmdletBinding()]

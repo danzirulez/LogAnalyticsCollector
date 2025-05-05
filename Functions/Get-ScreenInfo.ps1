@@ -1,22 +1,24 @@
 ﻿function Get-ScreenInfo {
     <#
     .SYNOPSIS
-    Retrieves detailed information about connected monitors, including manufacturer, serial number, and manufacturing details.
+        Retrieves detailed information about connected monitors, including manufacturer, serial number, and manufacturing details.
 
     .DESCRIPTION
-    This function queries the `WmiMonitorID` class for monitor details, such as the manufacturer, user-friendly name, serial number, and the year and week of manufacture.
-    It also collects the computer's hostname, IP address, and the currently logged-in user.
+        This function queries the `WmiMonitorID` class for monitor details, such as the manufacturer, user-friendly name, serial number, and the year and week of manufacture.
+        It also collects the computer's hostname, IP address, and the currently logged-in user.
 
     .OUTPUTS
-    Returns a collection of custom objects containing monitor details, including manufacturer information, serial number, and more.
+        Returns a collection of custom objects containing monitor details, including manufacturer information, serial number, and more.
 
     .EXAMPLE
-    Get-ScreenInfo
-    Retrieves and displays information about the monitors connected to the system.
+        Get-ScreenInfo
+        Retrieves and displays information about the monitors connected to the system.
 
     .NOTES
-    The `WmiMonitorID` class is used to gather information about connected monitors, and the `NetIPConfiguration` is used to get the computer's IP address.
-    The manufacturer names are mapped using a predefined lookup table.
+        The `WmiMonitorID` class is used to gather information about connected monitors, and the `NetIPConfiguration` is used to get the computer's IP address.
+        The manufacturer names are mapped using a predefined lookup table.
+        Author: DanZi
+        Last Updated: 2025-05-05
     #>
 
     [CmdletBinding()]
