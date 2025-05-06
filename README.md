@@ -4,7 +4,7 @@
 
 This repository contains a modular set of PowerShell functions designed to collect detailed system information from Windows devices. The collected data needs to be formatted as JSON and can be uploaded to Azure Log Analytics for use in reporting dashboards.
 
-Each function focuses on a specific aspect of the system — such as BIOS versions, driver inventory, installed applications, battery health, and more — making it easy to maintain, extend, and schedule based on reporting needs.
+Each function focuses on a specific aspect of the system - such as BIOS versions, driver inventory, installed applications, battery health, and more - making it easy to maintain, extend, and schedule based on reporting needs.
 
 ## Features
 
