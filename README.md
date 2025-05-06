@@ -1,4 +1,4 @@
-# Log Analytics Data Collection Functions
+# Log Analytics Data Collection Functions - Work in Progress :-)
 
 ## Overview
 
